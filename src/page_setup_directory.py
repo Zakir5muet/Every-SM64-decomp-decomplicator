@@ -89,27 +89,38 @@ class SetupDirectoryPage(QWizardPage):
                 gui_common.warning(self, "Invalid folder selected. Please select a different folder.")
                 continue
 
+            if list(project_path.iterdir()):
+                gui_common.warning(self, "Project folder must be empty. Please select a different folder.")
+                continue
+
             if not all(re.fullmatch(r"[a-zA-Z0-9 ._-]*", name) for name in project_path.parts[1:]):
                 gui_common.warning(
                     self,
                     "The selected project path contains folders with non-english letters or special characters in "
-                    "their names. You can choose to use this folder anyway, but you might run into errors when setting "
+                    "their names. You can choose to use this path anyway, but you might run into errors when setting "
                     "up or working on your project.\n"
                     "\n"
                     "Just in case, it is strongly recommended to choose another project path, with folder names that "
                     "only contain english letters, numbers, spaces, dots, dashes, and underscores."
                 )
 
-            if not list(project_path.iterdir()):
-                self.setup_context.project_path = project_path
-                elided_text = self.directory_text.fontMetrics().elidedText(
-                    str(project_path),
-                    QtCore.Qt.TextElideMode.ElideMiddle,
-                    self.directory_text.width()
+            if "  " in str(project_path):
+                gui_common.warning(
+                    self,
+                    "The selected project path contains multiple spaces in a row. You can choose to use this path "
+                    "anyway, but you might run into errors when setting up or working on your project.\n"
+                    "\n"
+                    "Just in case, it is strongly recommended to use another project path, with folder names that "
+                    "don't contain multiple spaces in a row."
                 )
-                self.directory_text.setText(elided_text)
-                self.completeChanged.emit()
-                log.info(f"Selected project directory {project_path}")
-                break
-            else:
-                gui_common.warning(self, "Project folder must be empty. Please select a different folder.")
+
+            self.setup_context.project_path = project_path
+            elided_text = self.directory_text.fontMetrics().elidedText(
+                str(project_path),
+                QtCore.Qt.TextElideMode.ElideMiddle,
+                self.directory_text.width()
+            )
+            self.directory_text.setText(elided_text)
+            self.completeChanged.emit()
+            log.info(f"Selected project directory {project_path}")
+            break
