@@ -2,7 +2,7 @@
 ESM64DD sets up development environments for Nintendo 64 decompilation projects on Windows. Simply choose a
 project template, select a project folder, and locate the base ROM, then let Decomplicator do the rest.
 
-To get started, [download the latest version](https://github.com/LucretiaArc/Decomplicator/releases).
+The original decomplicator: [download the latest version](https://github.com/LucretiaArc/Decomplicator/releases).
 
 # Why?
 Under normal circumstances, software developers can set up their own development environment. However, SM64
