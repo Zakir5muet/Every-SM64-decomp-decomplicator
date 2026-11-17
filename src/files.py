@@ -26,11 +26,11 @@ ASSETS_DIR = STATIC_DATA_DIR / "assets"
 CONFIG_DIR = STATIC_DATA_DIR / "config"
 VERSION_FILE = STATIC_DATA_DIR / "version.txt"
 
-PERSISTENT_DATA_DIR = pathlib.Path(os.getenv("APPDATA")) / "Decomplicator"
+PERSISTENT_DATA_DIR = pathlib.Path(os.getenv("APPDATA")) / "ESM64DD"
 PERSISTENT_DATA_DIR.mkdir(exist_ok=True)
 RECENT_PROJECTS_FILE = PERSISTENT_DATA_DIR / "recent.txt"
 
-VARIABLE_DATA_DIR = pathlib.Path(os.getenv("LOCALAPPDATA")) / "Decomplicator"
+VARIABLE_DATA_DIR = pathlib.Path(os.getenv("LOCALAPPDATA")) / "ESM64DD"
 VARIABLE_DATA_DIR.mkdir(exist_ok=True)
 DEP_CACHE_DIR = VARIABLE_DATA_DIR / "dependencies"
 ROM_CACHE_DIR = VARIABLE_DATA_DIR / "baseroms"
