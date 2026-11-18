@@ -1,4 +1,4 @@
-# This is the template for Decomplicator configuration files. These files provide information used for project setup,
+# This is the template for ESM64DD configuration files. These files provide information used for project setup,
 # acting as a "template file", but are also copied to the project directory to serve as the "project file". As a result,
 # some of the information in the file is only relevant when used as the project template, and other information is only
 # relevant when used as the project file.
@@ -21,7 +21,7 @@ name = "Example Game 64 Decomp v1.0"
 # Description of the template. This should be short, and should help users decide whether this template is right for
 # their project. This supports basic HTML, best used for subtle emphasis.
 # See https://doc.qt.io/qt-6/richtext-html-subset.html
-description = "This is an example of a Nintendo 64 decompilation project for <i>Example Game</i>."
+description = "This is an example of a SM64 decompilation project for <i>Example Game</i>."
 
 # Content of the splash screen that's displayed after project setup is successful. This can be used, for example, to
 # direct users toward tools and resources that will help them work on their project. Supports basic HTML.
