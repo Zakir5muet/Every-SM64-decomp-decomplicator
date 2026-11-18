@@ -16,7 +16,7 @@ ESM64DD's project templates are used to download and run external software. A ma
 harmful to your computer, and put your personal data at risk. Only use a third-party project template if you fully trust
 the author.
 
-# Building
+# Building/compiling
 Use `uv` to set up the project environment, then run `build.py` in the project environment:
 ```
 uv sync
