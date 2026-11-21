@@ -47,11 +47,11 @@ def get_version_file_content(version_number: str, commit_id: str) -> str:
         kids=[
             StringFileInfo([StringTable("040904B0",[
                 StringStruct("CompanyName", "Lucretia"),
-                StringStruct("FileDescription", "Decomplicator"),
+                StringStruct("FileDescription", "ESM64DD"),
                 StringStruct("FileVersion", version_text),
-                StringStruct("InternalName", "Decomplicator"),
-                StringStruct("OriginalFilename", "decomplicator.exe"),
-                StringStruct("ProductName", "Decomplicator"),
+                StringStruct("InternalName", "Every SM64 Decomp Decomplicator"),
+                StringStruct("OriginalFilename", "ESM64DD.exe"),
+                StringStruct("ProductName", "ESM64DD"),
                 StringStruct("ProductVersion", version_text),
             ])]),
             VarFileInfo([VarStruct("Translation", [0x0409, 0x04B0])])
@@ -64,7 +64,7 @@ def get_version_file_content(version_number: str, commit_id: str) -> str:
 def build():
     build_command = [
         "pyinstaller",
-        "--name",                   "decomplicator",
+        "--name",                   "ESM64DD",
         "--contents-directory",     "application",
         "--add-data",               "config:config",
         "--add-data",               "assets/icon.png:assets",
