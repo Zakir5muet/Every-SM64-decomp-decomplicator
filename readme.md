@@ -22,5 +22,6 @@ Use `uv` to set up the project environment, then run `build.py` in the project e
 uv sync
 uv run build.py
 ```
+Please install uv then follow the build instructions in the readme. I wrote this targeting Python 3.14, so I haven't checked whether 3.10 will work, but uv will download a more recent version for you anyway, along with the other python dependencies you need.
 # What's different from Decomplicator?
 I'm making this project because decomplicator has 2 sm64/n64 decomps, so i wanted to expand it to have (for now) every or most SM64 decomps.
